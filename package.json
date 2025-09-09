@@ -26,7 +26,9 @@
     "build-prod": "vite build --mode production",
     "build-vercel": "(cd ../../ && node ./scripts/build.js) && npm run build-dev",
     "preview": "vite preview",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@excalidraw/excalidraw": "^0.18.0",
@@ -46,6 +48,7 @@
     "@lexical/selection": "0.35.0",
     "@lexical/table": "0.35.0",
     "@lexical/utils": "0.35.0",
+    "@vitejs/plugin-react": "^4.2.1",
     "date-fns": "^4.1.0",
     "katex": "^0.16.10",
     "lexical": "0.35.0",
@@ -55,20 +58,31 @@
     "react-day-picker": "^9.7.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^3.1.4",
+    "vite": "^5.2.11",
     "y-websocket": "^1.5.4",
-    "yjs": ">=13.5.42",
-    "@vitejs/plugin-react": "^4.2.1",
-    "vite": "^5.2.11"
+    "yjs": ">=13.5.42"
   },
   "devDependencies": {
     "@babel/plugin-transform-flow-strip-types": "^7.24.7",
     "@babel/preset-react": "^7.24.7",
+    "@chromatic-com/storybook": "^4.1.1",
     "@prettier/sync": "^0.6.1",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
+    "@storybook/addon-a11y": "^9.1.5",
+    "@storybook/addon-docs": "^9.1.5",
+    "@storybook/addon-onboarding": "^9.1.5",
+    "@storybook/addon-vitest": "^9.1.5",
+    "@storybook/react-vite": "^9.1.5",
     "@types/lodash-es": "^4.14.182",
+    "@vitest/browser": "^3.2.4",
+    "@vitest/coverage-v8": "^3.2.4",
+    "playwright": "^1.55.0",
+    "prop-types": "^15.8.1",
     "rollup-plugin-copy": "^3.5.0",
-    "vite-plugin-static-copy": "^2.3.0"
+    "storybook": "^9.1.5",
+    "vite-plugin-static-copy": "^2.3.0",
+    "vitest": "^3.2.4"
   },
   "sideEffects": false
 }

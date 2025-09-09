@@ -6,12 +6,12 @@
  *
  */
 
-import type {JSX} from 'react';
+import type { JSX } from "react";
 
-import {useLexicalComposerContext} from '@lexical/react/LexicalComposerContext';
-import {$generateNodesFromDOM, $generateHtmlFromNodes} from '@lexical/html';
-import {$getRoot} from 'lexical';
-import {useEffect, useRef} from 'react';
+import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
+import { $generateNodesFromDOM, $generateHtmlFromNodes } from "@lexical/html";
+import { $createParagraphNode, $getRoot, $isTextNode } from "lexical";
+import { useEffect, useRef } from "react";
 
 interface ContentUpdatePluginProps {
   htmlContent: string;
@@ -23,10 +23,10 @@ export default function ContentUpdatePlugin({
   onUpdateComplete,
 }: ContentUpdatePluginProps): JSX.Element | null {
   const [editor] = useLexicalComposerContext();
-  const lastHtmlContentRef = useRef<string>('');
+  const lastHtmlContentRef = useRef<string>("");
   const isUpdatingRef = useRef<boolean>(false);
   const isInitializedRef = useRef<boolean>(false);
-  const lastEditorContentRef = useRef<string>('');
+  const lastEditorContentRef = useRef<string>("");
 
   useEffect(() => {
     // Chỉ update khi:
@@ -56,12 +56,21 @@ export default function ContentUpdatePlugin({
       editor.update(
         () => {
           const parser = new DOMParser();
-          const dom = parser.parseFromString(htmlContent, 'text/html');
+          const dom = parser.parseFromString(htmlContent, "text/html");
           const nodes = $generateNodesFromDOM(editor, dom);
 
           const root = $getRoot();
           root.clear();
-          root.append(...nodes);
+
+          // Root only accepts ElementNode or DecoratorNode.
+          // If generated nodes contain top-level TextNodes, wrap them.
+          if (nodes.some((n) => $isTextNode(n))) {
+            const paragraph = $createParagraphNode();
+            paragraph.append(...nodes);
+            root.append(paragraph);
+          } else {
+            root.append(...nodes);
+          }
         },
         {
           onUpdate: () => {
@@ -79,14 +88,14 @@ export default function ContentUpdatePlugin({
               onUpdateComplete();
             }
           },
-        },
+        }
       );
     }
   }, [editor, htmlContent, onUpdateComplete]);
 
   // Track editor content để so sánh
   useEffect(() => {
-    return editor.registerUpdateListener(({editorState}) => {
+    return editor.registerUpdateListener(({ editorState }) => {
       editorState.read(() => {
         const currentEditorContent = $generateHtmlFromNodes(editor, null);
         lastEditorContentRef.current = currentEditorContent;
