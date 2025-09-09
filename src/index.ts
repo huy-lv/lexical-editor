@@ -45,7 +45,8 @@ export * from "./collaboration";
 // Export commenting
 export * from "./commenting";
 
-// Do not export server-only code in library bundle
+// Export nodes collection
+export { default as PlaygroundNodes } from "./nodes/PlaygroundNodes";
 
 // Export setup environment
 export { default as setupEnv } from "./setupEnv";
