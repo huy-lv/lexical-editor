@@ -12,9 +12,10 @@
   ],
   "exports": {
     ".": {
+      "source": "./src/index.ts",
       "import": "./dist/index.esm.js",
       "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./src/index.ts"
     },
     "./styles": "./dist/styles.css"
   },
