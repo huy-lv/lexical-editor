@@ -1,5 +1,5 @@
 import { l as N } from "./LexicalCollaborationContext.prod-DV6xOiZN.js";
-import { O as E, Q as L, j as y } from "./index-b9RrN2bn.js";
+import { O as E, Q as L, j as y } from "./index-C0aYvSXU.js";
 import { getRegisteredNode as D, createSharedNodeState as x, getStaticNodeConfig as K } from "lexical";
 import { useRef as O, useContext as R, useMemo as j, useEffect as w } from "react";
 function k(e) {

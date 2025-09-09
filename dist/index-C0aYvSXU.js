@@ -2,7 +2,7 @@ import * as Y from "react";
 import Nt, { useContext as ln, createContext as Fi, useMemo as He, useLayoutEffect as wt, useEffect as U, useState as J, useCallback as $, useRef as le, Suspense as CA, forwardRef as cn } from "react";
 import { $isLinkNode as Xe, TOGGLE_LINK_COMMAND as Wt, $isAutoLinkNode as Ln, $createLinkNode as vi, LinkNode as Hs, $toggleLink as Oo, AutoLinkNode as Qc } from "@lexical/link";
 import { INSERT_ORDERED_LIST_COMMAND as Bc, INSERT_UNORDERED_LIST_COMMAND as Kc, INSERT_CHECK_LIST_COMMAND as Yc, $isListNode as jc, ListNode as Rs, ListItemNode as Gc, $createListNode as Zc, $createListItemNode as Sn } from "@lexical/list";
-import { createEditor as un, $getRoot as ct, $createParagraphNode as _e, $getSelection as re, HISTORY_MERGE_TAG as vs, UNDO_COMMAND as pA, CAN_REDO_COMMAND as Xi, CAN_UNDO_COMMAND as Pi, HISTORIC_TAG as Yi, COMMAND_PRIORITY_EDITOR as Dt, REDO_COMMAND as VA, CLEAR_EDITOR_COMMAND as Nc, CLEAR_HISTORY_COMMAND as Jc, HISTORY_PUSH_TAG as bc, $isRangeSelection as ge, $isTextNode as Be, $isRootNode as kA, isDOMNode as mo, getNearestEditorFromDOMNode as Uc, $getNearestNodeFromDOMNode as ht, $isElementNode as Le, $isNodeSelection as Jt, $createNodeSelection as Fc, $setSelection as wi, $getNodeByKey as je, createCommand as tt, DecoratorNode as It, $applyNodeReplacement as ni, CLICK_COMMAND as Eo, COMMAND_PRIORITY_LOW as et, TextNode as zt, $isDecoratorNode as ji, $isParagraphNode as Xs, $createTextNode as Ye, KEY_TAB_COMMAND as MA, $isBlockElementNode as wc, $createRangeSelection as qA, $normalizeSelection__EXPERIMENTAL as Wc, OUTDENT_CONTENT_COMMAND as yA, INDENT_CONTENT_COMMAND as Cs, INSERT_TAB_COMMAND as Oc, COMMAND_PRIORITY_CRITICAL as xi, KEY_ARROW_RIGHT_COMMAND as SA, $addUpdateTag as xA, isHTMLElement as hi, CUT_COMMAND as Dc, COPY_COMMAND as Tc, PASTE_COMMAND as zn, DRAGOVER_COMMAND as QA, DROP_COMMAND as BA, COMMAND_PRIORITY_HIGH as en, SELECTION_CHANGE_COMMAND as dn, $isLineBreakNode as ho, getDOMSelection as Ii, KEY_ESCAPE_COMMAND as Lc, $getNodeByKeyOrThrow as Oi, removeFromParent as Yr, COLLABORATION_TAG as KA, SKIP_SCROLL_INTO_VIEW_TAG as ps, $getWritableNodeState as YA, FORMAT_TEXT_COMMAND as Te, RootNode as zc, LineBreakNode as fc, ParagraphNode as Hc, $insertNodes as vc, $isRootOrShadowRoot as jA, DRAGSTART_COMMAND as Xc, getDOMSelectionFromTarget as Pc, ElementNode as Gi, KEY_ARROW_DOWN_COMMAND as _c, KEY_ARROW_UP_COMMAND as $c, KEY_ARROW_LEFT_COMMAND as eu, FORMAT_ELEMENT_COMMAND as si, $rewindSiblingCaret as tu, $getSiblingCaret as iu, buildImportMap as Ps, createState as _s, $getState as Vs, $setState as ks, COMMAND_PRIORITY_NORMAL as nu } from "lexical";
+import { createEditor as un, $getRoot as ct, $createParagraphNode as Pe, $getSelection as re, HISTORY_MERGE_TAG as vs, UNDO_COMMAND as pA, CAN_REDO_COMMAND as Xi, CAN_UNDO_COMMAND as Pi, HISTORIC_TAG as Yi, COMMAND_PRIORITY_EDITOR as Dt, REDO_COMMAND as VA, CLEAR_EDITOR_COMMAND as Nc, CLEAR_HISTORY_COMMAND as Jc, HISTORY_PUSH_TAG as bc, $isRangeSelection as ge, $isTextNode as xe, $isRootNode as kA, isDOMNode as mo, getNearestEditorFromDOMNode as Uc, $getNearestNodeFromDOMNode as ht, $isElementNode as Le, $isNodeSelection as Jt, $createNodeSelection as Fc, $setSelection as wi, $getNodeByKey as je, createCommand as tt, DecoratorNode as It, $applyNodeReplacement as ni, CLICK_COMMAND as Eo, COMMAND_PRIORITY_LOW as et, TextNode as zt, $isDecoratorNode as ji, $isParagraphNode as Xs, $createTextNode as Ye, KEY_TAB_COMMAND as MA, $isBlockElementNode as wc, $createRangeSelection as qA, $normalizeSelection__EXPERIMENTAL as Wc, OUTDENT_CONTENT_COMMAND as yA, INDENT_CONTENT_COMMAND as Cs, INSERT_TAB_COMMAND as Oc, COMMAND_PRIORITY_CRITICAL as xi, KEY_ARROW_RIGHT_COMMAND as SA, $addUpdateTag as xA, isHTMLElement as hi, CUT_COMMAND as Dc, COPY_COMMAND as Tc, PASTE_COMMAND as zn, DRAGOVER_COMMAND as QA, DROP_COMMAND as BA, COMMAND_PRIORITY_HIGH as en, SELECTION_CHANGE_COMMAND as dn, $isLineBreakNode as ho, getDOMSelection as Ii, KEY_ESCAPE_COMMAND as Lc, $getNodeByKeyOrThrow as Oi, removeFromParent as Yr, COLLABORATION_TAG as KA, SKIP_SCROLL_INTO_VIEW_TAG as ps, $getWritableNodeState as YA, FORMAT_TEXT_COMMAND as Te, RootNode as zc, LineBreakNode as fc, ParagraphNode as Hc, $insertNodes as vc, $isRootOrShadowRoot as jA, DRAGSTART_COMMAND as Xc, getDOMSelectionFromTarget as Pc, ElementNode as Gi, KEY_ARROW_DOWN_COMMAND as _c, KEY_ARROW_UP_COMMAND as $c, KEY_ARROW_LEFT_COMMAND as eu, FORMAT_ELEMENT_COMMAND as si, $rewindSiblingCaret as tu, $getSiblingCaret as iu, buildImportMap as Ps, createState as _s, $getState as Vs, $setState as ks, COMMAND_PRIORITY_NORMAL as nu } from "lexical";
 import { registerRichText as ou, eventFiles as jr, HeadingNode as GA, $isHeadingNode as Qi, $isQuoteNode as su, $createHeadingNode as ZA, $createQuoteNode as NA, QuoteNode as ru } from "@lexical/rich-text";
 import { mergeRegister as we, $findMatchingParent as Ct, isHTMLAnchorElement as au, addClassNamesToElement as ei, removeClassNamesFromElement as JA, $insertNodeToNearestRoot as bA, selectionAlwaysOnDisplay as Au, $filter as lu, $getNearestBlockElementAncestorOrThrow as fn, isHTMLElement as Do, calculateZoomLevel as _t, $wrapNodeInElement as cu, objectKlassEquals as uu, $getNextRightPreorderNode as Gr, IS_CHROME as Hn, IS_APPLE as pe, $isEditorIsNestedEditor as du, $getNearestNodeOfType as Zr, CAN_USE_DOM as Iu, CAN_USE_BEFORE_INPUT as gu } from "@lexical/utils";
 import * as UA from "react-dom";
@@ -77,8 +77,8 @@ function ed() {
     }
     function k(M, b, z) {
       {
-        var Ae = R.ReactDebugCurrentFrame, Qe = Ae.getStackAddendum();
-        Qe !== "" && (b += "%s", z = z.concat([Qe]));
+        var Ae = R.ReactDebugCurrentFrame, Be = Ae.getStackAddendum();
+        Be !== "" && (b += "%s", z = z.concat([Be]));
         var Ge = z.map(function(Me) {
           return String(Me);
         });
@@ -98,8 +98,8 @@ function ed() {
       var Ae = M.displayName;
       if (Ae)
         return Ae;
-      var Qe = b.displayName || b.name || "";
-      return Qe !== "" ? z + "(" + Qe + ")" : z;
+      var Be = b.displayName || b.name || "";
+      return Be !== "" ? z + "(" + Be + ")" : z;
     }
     function K(M) {
       return M.displayName || "Context";
@@ -139,7 +139,7 @@ function ed() {
             var Ae = M.displayName || null;
             return Ae !== null ? Ae : j(M.type) || "Memo";
           case h: {
-            var Qe = M, Ge = Qe._payload, Me = Qe._init;
+            var Be = M, Ge = Be._payload, Me = Be._init;
             try {
               return j(Me(Ge));
             } catch {
@@ -217,8 +217,8 @@ function ed() {
         if (be === void 0)
           try {
             throw Error();
-          } catch (Qe) {
-            var Ae = Qe.stack.trim().match(/\n( *(at )?)/);
+          } catch (Be) {
+            var Ae = Be.stack.trim().match(/\n( *(at )?)/);
             be = Ae && Ae[1] || "";
           }
         return `
@@ -240,7 +240,7 @@ function ed() {
       }
       var Ae;
       rt = !0;
-      var Qe = Error.prepareStackTrace;
+      var Be = Error.prepareStackTrace;
       Error.prepareStackTrace = void 0;
       var Ge;
       Ge = Je.current, Je.current = null, Ve();
@@ -296,7 +296,7 @@ function ed() {
             }
         }
       } finally {
-        rt = !1, Je.current = Ge, Ee(), Error.prepareStackTrace = Qe;
+        rt = !1, Je.current = Ge, Ee(), Error.prepareStackTrace = Be;
       }
       var ki = M ? M.displayName || M.name : "", oi = ki ? Ze(ki) : "";
       return typeof M == "function" && _.set(M, oi), oi;
@@ -328,9 +328,9 @@ function ed() {
           case I:
             return ae(M.type, b, z);
           case h: {
-            var Ae = M, Qe = Ae._payload, Ge = Ae._init;
+            var Ae = M, Be = Ae._payload, Ge = Ae._init;
             try {
-              return ae(Ge(Qe), b, z);
+              return ae(Ge(Be), b, z);
             } catch {
             }
           }
@@ -345,7 +345,7 @@ function ed() {
       } else
         Ce.setExtraStackFrame(null);
     }
-    function W(M, b, z, Ae, Qe) {
+    function W(M, b, z, Ae, Be) {
       {
         var Ge = Function.call.bind(ce);
         for (var Me in M)
@@ -360,7 +360,7 @@ function ed() {
             } catch (De) {
               Re = De;
             }
-            Re && !(Re instanceof Error) && (T(Qe), p("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", Ae || "React class", z, Me, typeof Re), T(null)), Re instanceof Error && !(Re.message in he) && (he[Re.message] = !0, T(Qe), p("Failed %s type: %s", z, Re.message), T(null));
+            Re && !(Re instanceof Error) && (T(Be), p("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", Ae || "React class", z, Me, typeof Re), T(null)), Re instanceof Error && !(Re.message in he) && (he[Re.message] = !0, T(Be), p("Failed %s type: %s", z, Re.message), T(null));
           }
       }
     }
@@ -376,17 +376,17 @@ function ed() {
     }
     function ye(M) {
       try {
-        return xe(M), !1;
+        return Qe(M), !1;
       } catch {
         return !0;
       }
     }
-    function xe(M) {
+    function Qe(M) {
       return "" + M;
     }
     function at(M) {
       if (ye(M))
-        return p("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", f(M)), xe(M);
+        return p("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", f(M)), Qe(M);
     }
     var Yt = R.ReactCurrentOwner, Ot = {
       key: !0,
@@ -435,7 +435,7 @@ function ed() {
         });
       }
     }
-    var Ne = function(M, b, z, Ae, Qe, Ge, Me) {
+    var Ne = function(M, b, z, Ae, Be, Ge, Me) {
       var Re = {
         // This tag allows us to uniquely identify this as a React Element
         $$typeof: i,
@@ -461,13 +461,13 @@ function ed() {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: Qe
+        value: Be
       }), Object.freeze && (Object.freeze(Re.props), Object.freeze(Re)), Re;
     };
-    function Vt(M, b, z, Ae, Qe) {
+    function Vt(M, b, z, Ae, Be) {
       {
         var Ge, Me = {}, Re = null, ut = null;
-        z !== void 0 && (at(z), Re = "" + z), At(b) && (at(b.key), Re = "" + b.key), Ke(b) && (ut = b.ref, ve(b, Qe));
+        z !== void 0 && (at(z), Re = "" + z), At(b) && (at(b.key), Re = "" + b.key), Ke(b) && (ut = b.ref, ve(b, Be));
         for (Ge in b)
           ce.call(b, Ge) && !Ot.hasOwnProperty(Ge) && (Me[Ge] = b[Ge]);
         if (M && M.defaultProps) {
@@ -479,7 +479,7 @@ function ed() {
           var ze = typeof M == "function" ? M.displayName || M.name || "Unknown" : M;
           Re && gt(Me, ze), ut && de(Me, ze);
         }
-        return Ne(M, Re, ut, Qe, Ae, Yt.current, Me);
+        return Ne(M, Re, ut, Be, Ae, Yt.current, Me);
       }
     }
     var We = R.ReactCurrentOwner, ue = R.ReactDebugCurrentFrame;
@@ -548,9 +548,9 @@ Check the top-level render call using <` + z + ">.");
         else if (it(M))
           M._store && (M._store.validated = !0);
         else if (M) {
-          var Qe = C(M);
-          if (typeof Qe == "function" && Qe !== M.entries)
-            for (var Ge = Qe.call(M), Me; !(Me = Ge.next()).done; )
+          var Be = C(M);
+          if (typeof Be == "function" && Be !== M.entries)
+            for (var Ge = Be.call(M), Me; !(Me = Ge.next()).done; )
               it(Me.value) && xr(Me.value, b);
         }
       }
@@ -574,8 +574,8 @@ Check the top-level render call using <` + z + ">.");
           W(z, M.props, "prop", Ae, M);
         } else if (b.PropTypes !== void 0 && !me) {
           me = !0;
-          var Qe = j(b);
-          p("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", Qe || "Unknown");
+          var Be = j(b);
+          p("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", Be || "Unknown");
         }
         typeof b.getDefaultProps == "function" && !b.getDefaultProps.isReactClassApproved && p("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
       }
@@ -593,7 +593,7 @@ Check the top-level render call using <` + z + ">.");
       }
     }
     var Br = {};
-    function Kr(M, b, z, Ae, Qe, Ge) {
+    function Kr(M, b, z, Ae, Be, Ge) {
       {
         var Me = V(M);
         if (!Me) {
@@ -604,7 +604,7 @@ Check the top-level render call using <` + z + ">.");
           var De;
           M === null ? De = "null" : L(M) ? De = "array" : M !== void 0 && M.$$typeof === i ? (De = "<" + (j(M.type) || "Unknown") + " />", Re = " Did you accidentally export a JSX literal instead of a component?") : De = typeof M, p("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", De, Re);
         }
-        var ze = Vt(M, b, z, Qe, Ge);
+        var ze = Vt(M, b, z, Be, Ge);
         if (ze == null)
           return ze;
         if (Me) {
@@ -675,7 +675,7 @@ function od({ initialConfig: t, children: e }) {
         if (I === void 0) d.update(() => {
           const h = ct();
           if (h.isEmpty()) {
-            const g = _e();
+            const g = Pe();
             h.append(g);
             const m = fA ? document.activeElement : null;
             (re() !== null || m !== null && m === d.getRootElement()) && g.select();
@@ -770,10 +770,10 @@ function ld(t, e, i, n, o) {
   if (A.length === 0) return Bt;
   if (A.length > 1) {
     const C = e._nodeMap, R = C.get(s.anchor.key), p = C.get(r.anchor.key);
-    return R && p && !t._nodeMap.has(R.__key) && Be(R) && R.__text.length === 1 && s.anchor.offset === 1 ? Tr : Bt;
+    return R && p && !t._nodeMap.has(R.__key) && xe(R) && R.__text.length === 1 && s.anchor.offset === 1 ? Tr : Bt;
   }
   const l = A[0], c = t._nodeMap.get(l.__key);
-  if (!Be(c) || !Be(l) || c.__mode !== l.__mode) return Bt;
+  if (!xe(c) || !xe(l) || c.__mode !== l.__mode) return Bt;
   const u = c.__text, d = l.__text;
   if (u === d) return Bt;
   const I = s.anchor, h = r.anchor;
@@ -793,7 +793,7 @@ function cd(t, e) {
       const m = s._selection;
       return A.size > 0 || l.size > 0 ? g === !1 && d !== Bt && d === n && u < i + e && h || A.size === 1 && function(E, C, R) {
         const p = C._nodeMap.get(E), k = R._nodeMap.get(E), q = C._selection, x = R._selection;
-        return !(ge(q) && ge(x) && q.anchor.type === "element" && q.focus.type === "element" && x.anchor.type === "text" && x.focus.type === "text" || !Be(p) || !Be(k) || p.__parent !== k.__parent) && JSON.stringify(C.read(() => p.exportJSON())) === JSON.stringify(R.read(() => k.exportJSON()));
+        return !(ge(q) && ge(x) && q.anchor.type === "element" && q.focus.type === "element" && x.anchor.type === "text" && x.focus.type === "text" || !xe(p) || !xe(k) || p.__parent !== k.__parent) && JSON.stringify(C.read(() => p.exportJSON())) === JSON.stringify(R.read(() => k.exportJSON()));
       }(Array.from(A)[0], o, s) ? Bn : xs : m !== null ? Bn : Qs;
     })();
     return i = u, n = d, I;
@@ -1122,7 +1122,7 @@ function Sd(t) {
       const s = o.getChildren(), r = s.length;
       for (let A = 0; A < r; A++) {
         const l = s[n];
-        if (!Be(l)) return !1;
+        if (!xe(l)) return !1;
       }
     }
   }
@@ -1145,7 +1145,7 @@ function gR(t, e, i, n) {
   return [t.registerNodeTransform(zt, (r) => {
     if (!r.isSimpleText()) return;
     let A, l = r.getPreviousSibling(), c = r.getTextContent(), u = r;
-    if (Be(l)) {
+    if (xe(l)) {
       const I = l.getTextContent(), h = e(I + c);
       if (o(l)) {
         if (h === null || ((g) => g.getLatest().__mode)(l) !== 0) return void s(l);
@@ -1169,7 +1169,7 @@ function gR(t, e, i, n) {
       let I, h = A === null ? "" : c.slice(A.end);
       if (c = h, h === "") {
         const m = u.getNextSibling();
-        if (Be(m)) {
+        if (xe(m)) {
           h = u.getTextContent() + m.getTextContent();
           const E = e(h);
           if (E === null) return void (o(m) ? s(m) : m.markDirty());
@@ -1177,7 +1177,7 @@ function gR(t, e, i, n) {
         }
       }
       if (A === null) return;
-      if (A.start === 0 && Be(l) && l.isTextEntity()) {
+      if (A.start === 0 && xe(l) && l.isTextEntity()) {
         d += A.end;
         continue;
       }
@@ -1191,9 +1191,9 @@ function gR(t, e, i, n) {
     if (l === null || l.start !== 0) return void s(r);
     if (A.length > l.end) return void r.splitText(l.end);
     const c = r.getPreviousSibling();
-    Be(c) && c.isTextEntity() && (s(c), s(r));
+    xe(c) && c.isTextEntity() && (s(c), s(r));
     const u = r.getNextSibling();
-    Be(u) && u.isTextEntity() && (s(u), o(r) && s(r));
+    xe(u) && u.isTextEntity() && (s(u), o(r) && s(r));
   })];
 }
 function nl(t) {
@@ -1220,7 +1220,7 @@ function nl(t) {
               if (ge(m)) {
                 const E = m.anchor;
                 let C = E.getNode(), R = 0, p = 0;
-                if (Be(C) && c >= 0 && u >= 0 && (R = c, p = c + u, m.setTextNodeRange(C, R, C, p)), R === p && d === "" || (m.insertRawText(d), C = E.getNode()), Be(C)) {
+                if (xe(C) && c >= 0 && u >= 0 && (R = c, p = c + u, m.setTextNodeRange(C, R, C, p)), R === p && d === "" || (m.insertRawText(d), C = E.getNode()), xe(C)) {
                   R = I, p = I + h;
                   const k = C.getTextContentSize();
                   R = R > k ? k : R, p = p > k ? k : p, m.setTextNodeRange(C, R, C, p);
@@ -1389,7 +1389,11 @@ function bd({
     (!s.current && t && t !== n.current || t !== n.current && t !== r.current && !o.current && s.current) && (n.current = t, o.current = !0, s.current = !0, i._setUpdatingFromExternal && i._setUpdatingFromExternal(!0), i.update(
       () => {
         const c = new DOMParser().parseFromString(t, "text/html"), u = Ku(i, c), d = ct();
-        d.clear(), d.append(...u);
+        if (d.clear(), u.some((I) => xe(I))) {
+          const I = Pe();
+          I.append(...u), d.append(I);
+        } else
+          d.append(...u);
       },
       {
         onUpdate: () => {
@@ -1511,7 +1515,7 @@ function _r(t) {
   if (!ge(t) || !t.isCollapsed())
     return [!1, ""];
   const e = t.getNodes()[0], i = t.anchor;
-  if (!Be(e) || !e.isSimpleText() || !ys(i))
+  if (!xe(e) || !e.isSimpleText() || !ys(i))
     return [!1, ""];
   const n = [], o = e.getTextContent();
   let s = e.getTextContentSize(), r;
@@ -5432,7 +5436,7 @@ function LI(t, e) {
   }, [c, i, o.floating, A, be, h, r, k, g, j, ne, Ve]), Oe(() => {
     var W;
     if (!c || o.floating || !K || m || !v.current) return;
-    const X = K.nodesRef.current, L = (W = X.find((xe) => xe.id === Q)) == null || (W = W.context) == null ? void 0 : W.elements.floating, f = Ht(yt(o.floating)), ye = X.some((xe) => xe.context && Et(xe.context.elements.floating, f));
+    const X = K.nodesRef.current, L = (W = X.find((Qe) => Qe.id === Q)) == null || (W = W.context) == null ? void 0 : W.elements.floating, f = Ht(yt(o.floating)), ye = X.some((Qe) => Qe.context && Et(Qe.context.elements.floating, f));
     L && !ye && w.current && L.focus({ preventScroll: !0 });
   }, [c, o.floating, K, Q, m]), Oe(() => {
     if (c && K && m && !Q) return K.events.on("virtualfocus", W), () => {
@@ -5474,7 +5478,7 @@ function LI(t, e) {
     if (h && ya(W.key, k, g, x)) return Jn(W.key, ae()) || nt(W), n(!1, W.nativeEvent, "list-navigation"), void ($e(o.domReference) && (m ? K == null || K.events.emit("virtualfocus", o.domReference) : o.domReference.focus()));
     const X = F.current, L = Ho(r, p), f = na(r, p);
     if (N || (W.key === "Home" && (nt(W), F.current = L, j()), W.key === "End" && (nt(W), F.current = f, j())), x > 1) {
-      const ye = B || Array.from({ length: r.current.length }, () => ({ width: 1, height: 1 })), xe = function(ke, Se, Ke) {
+      const ye = B || Array.from({ length: r.current.length }, () => ({ width: 1, height: 1 })), Qe = function(ke, Se, Ke) {
         const At = [];
         let ve = 0;
         return ke.forEach((gt, de) => {
@@ -5489,7 +5493,7 @@ function LI(t, e) {
             }), We = !0) : ve++;
           }
         }), [...At];
-      }(ye, x, Z), at = xe.findIndex((ke) => ke != null && !On(r, ke, p)), Yt = xe.reduce((ke, Se, Ke) => Se == null || On(r, Se, p) ? ke : Ke, -1), Ot = xe[function(ke, Se) {
+      }(ye, x, Z), at = Qe.findIndex((ke) => ke != null && !On(r, ke, p)), Yt = Qe.reduce((ke, Se, Ke) => Se == null || On(r, Se, p) ? ke : Ke, -1), Ot = Qe[function(ke, Se) {
         let { event: Ke, orientation: At, loop: ve, rtl: gt, cols: de, disabledIndices: Ne, minIndex: Vt, maxIndex: We, prevIndex: ue, stopEvent: Ue = !1 } = Se, me = ue;
         if (Ke.key === II) {
           if (Ue && nt(Ke), ue === -1) me = We;
@@ -5506,7 +5510,7 @@ function LI(t, e) {
           Li(ke, me) && (me = ve && jt ? Ke.key === (gt ? zo : Lo) ? We : lt(ke, { startingIndex: ue - ue % de - 1, disabledIndices: Ne }) : ue);
         }
         return me;
-      }({ current: xe.map((ke) => ke != null ? r.current[ke] : null) }, { event: W, orientation: k, loop: I, rtl: g, cols: x, disabledIndices: hI([...p || r.current.map((ke, Se) => On(r, Se) ? Se : void 0), void 0], xe), minIndex: at, maxIndex: Yt, prevIndex: EI(F.current > f ? L : F.current, ye, xe, x, W.key === So ? "bl" : W.key === (g ? gn : mn) ? "tr" : "tl"), stopEvent: !0 })];
+      }({ current: Qe.map((ke) => ke != null ? r.current[ke] : null) }, { event: W, orientation: k, loop: I, rtl: g, cols: x, disabledIndices: hI([...p || r.current.map((ke, Se) => On(r, Se) ? Se : void 0), void 0], Qe), minIndex: at, maxIndex: Yt, prevIndex: EI(F.current > f ? L : F.current, ye, Qe, x, W.key === So ? "bl" : W.key === (g ? gn : mn) ? "tr" : "tl"), stopEvent: !0 })];
       if (Ot != null && (F.current = Ot, j()), k === "both") return;
     }
     if (Jn(W.key, k)) {
@@ -5524,7 +5528,7 @@ function LI(t, e) {
     }
     return { ...he, onKeyDown(L) {
       w.current = !1;
-      const f = L.key.startsWith("Arrow"), ye = ["Home", "End"].includes(L.key), xe = f || ye, at = qa(L.key, k, g), Yt = ya(L.key, k, g, x), Ot = qa(L.key, ae(), g), ke = Jn(L.key, k), Se = (h ? Ot : ke) || L.key === "Enter" || L.key.trim() === "";
+      const f = L.key.startsWith("Arrow"), ye = ["Home", "End"].includes(L.key), Qe = f || ye, at = qa(L.key, k, g), Yt = ya(L.key, k, g, x), Ot = qa(L.key, ae(), g), ke = Jn(L.key, k), Se = (h ? Ot : ke) || L.key === "Enter" || L.key.trim() === "";
       if (m && i) {
         const gt = K == null ? void 0 : K.nodesRef.current.find((Ne) => Ne.parentId == null), de = K && gt ? function(Ne, Vt) {
           let We, ue = -1;
@@ -5534,7 +5538,7 @@ function LI(t, e) {
             });
           }(Vt, 0), Ne.find((Ue) => Ue.id === We);
         }(K.nodesRef.current, gt.id) : null;
-        if (xe && de && S) {
+        if (Qe && de && S) {
           const Ne = new KeyboardEvent("keydown", { key: L.key, bubbles: !0 });
           if (at || Yt) {
             var Ke, At;
@@ -5612,8 +5616,8 @@ const fI = cn(({ className: t, disabled: e, ...i }, n) => a.jsx("hr", { classNam
       if (!Ze && (T.stopPropagation(), L.length > 0)) {
         let f = !0;
         if (L.forEach((ye) => {
-          var xe;
-          (xe = ye.context) == null || !xe.open || ye.context.dataRef.current.__escapeKeyBubbles || (f = !1);
+          var Qe;
+          (Qe = ye.context) == null || !Qe.open || ye.context.dataRef.current.__escapeKeyBubbles || (f = !1);
         }), !f) return;
       }
       Q(!1, function(f) {
@@ -5632,14 +5636,14 @@ const fI = cn(({ className: t, disabled: e, ...i }, n) => a.jsx("hr", { classNam
       Je.current = !1;
       const L = be.current;
       if (be.current = !1, G === "click" && L || X || typeof Ee == "function" && !Ee(T)) return;
-      const f = li(T), ye = "[" + An("inert") + "]", xe = yt(K.floating).querySelectorAll(ye);
+      const f = li(T), ye = "[" + An("inert") + "]", Qe = yt(K.floating).querySelectorAll(ye);
       let at = Fe(f) ? f : null;
       for (; at && !Lt(at); ) {
         const Se = Tt(at);
         if (Lt(Se) || !Fe(Se)) break;
         at = Se;
       }
-      if (xe.length && Fe(f) && !f.matches("html,body") && !Et(f, K.floating) && Array.from(xe).every((Se) => !Et(at, Se))) return;
+      if (Qe.length && Fe(f) && !f.matches("html,body") && !Et(f, K.floating) && Array.from(Qe).every((Se) => !Et(at, Se))) return;
       if ($e(f) && Ce) {
         const Se = Lt(f), Ke = xt(f), At = /auto|scroll/, ve = Se || At.test(Ke.overflowX), gt = Se || At.test(Ke.overflowY), de = ve && f.clientWidth > 0 && f.scrollWidth > f.clientWidth, Ne = gt && f.clientHeight > 0 && f.scrollHeight > f.clientHeight, Vt = Ke.direction === "rtl", We = Ne && (Vt ? T.offsetX <= f.offsetWidth - f.clientWidth : T.offsetX > f.clientWidth), ue = de && T.offsetY > f.clientHeight;
         if (We || ue) return;
@@ -5670,8 +5674,8 @@ const fI = cn(({ className: t, disabled: e, ...i }, n) => a.jsx("hr", { classNam
       if (!V || !N) return;
       j.current.__escapeKeyBubbles = Ze, j.current.__outsidePressBubbles = rt;
       let T = -1;
-      function W(xe) {
-        Q(!1, xe, "ancestor-scroll");
+      function W(Qe) {
+        Q(!1, Qe, "ancestor-scroll");
       }
       function X() {
         window.clearTimeout(T), ne.current = !0;
@@ -5684,14 +5688,14 @@ const fI = cn(({ className: t, disabled: e, ...i }, n) => a.jsx("hr", { classNam
       const f = yt(K.floating);
       D && (f.addEventListener("keydown", _ ? se : te, _), f.addEventListener("compositionstart", X), f.addEventListener("compositionend", L)), Ee && f.addEventListener(G, ie ? ce : ae, ie);
       let ye = [];
-      return v && (Fe(K.domReference) && (ye = $t(K.domReference)), Fe(K.floating) && (ye = ye.concat($t(K.floating))), !Fe(K.reference) && K.reference && K.reference.contextElement && (ye = ye.concat($t(K.reference.contextElement)))), ye = ye.filter((xe) => {
+      return v && (Fe(K.domReference) && (ye = $t(K.domReference)), Fe(K.floating) && (ye = ye.concat($t(K.floating))), !Fe(K.reference) && K.reference && K.reference.contextElement && (ye = ye.concat($t(K.reference.contextElement)))), ye = ye.filter((Qe) => {
         var at;
-        return xe !== ((at = f.defaultView) == null ? void 0 : at.visualViewport);
-      }), ye.forEach((xe) => {
-        xe.addEventListener("scroll", W, { passive: !0 });
+        return Qe !== ((at = f.defaultView) == null ? void 0 : at.visualViewport);
+      }), ye.forEach((Qe) => {
+        Qe.addEventListener("scroll", W, { passive: !0 });
       }), () => {
-        D && (f.removeEventListener("keydown", _ ? se : te, _), f.removeEventListener("compositionstart", X), f.removeEventListener("compositionend", L)), Ee && f.removeEventListener(G, ie ? ce : ae, ie), ye.forEach((xe) => {
-          xe.removeEventListener("scroll", W);
+        D && (f.removeEventListener("keydown", _ ? se : te, _), f.removeEventListener("compositionstart", X), f.removeEventListener("compositionend", L)), Ee && f.removeEventListener(G, ie ? ce : ae, ie), ye.forEach((Qe) => {
+          Qe.removeEventListener("scroll", W);
         }), window.clearTimeout(T);
       };
     }, [j, K, D, Ee, G, V, Q, v, N, Ze, rt, te, _, se, ae, ie, ce]), Y.useEffect(() => {
@@ -6081,7 +6085,7 @@ function og({
       const l = ht(o);
       if (!l)
         return;
-      const c = _e();
+      const c = Pe();
       A.altKey || A.ctrlKey ? l.insertBefore(c) : l.insertAfter(c), c.select();
     });
   }
@@ -6501,11 +6505,11 @@ class dt {
   getPrevNode(e) {
     if (e === null) return null;
     const i = e.get(this._key);
-    return Be(i) ? i : null;
+    return xe(i) ? i : null;
   }
   getNode() {
     const e = je(this._key);
-    return Be(e) ? e : null;
+    return xe(e) ? e : null;
   }
   getSharedType() {
     return this._map;
@@ -6567,7 +6571,7 @@ function Fl(t, e, i, n) {
 const Rg = /* @__PURE__ */ new Set(["__key", "__parent", "__next", "__prev", "__state"]), Cg = /* @__PURE__ */ new Set(["__first", "__last", "__size"]), pg = /* @__PURE__ */ new Set(["__cachedText"]), Vg = /* @__PURE__ */ new Set(["__text"]);
 function wl(t, e, i) {
   if (Rg.has(t) || typeof e[t] == "function") return !0;
-  if (Be(e)) {
+  if (xe(e)) {
     if (Vg.has(t)) return !0;
   } else if (Le(e) && (Cg.has(t) || kA(e) && pg.has(t))) return !0;
   const n = e.constructor, o = i.excludedProperties.get(n);
@@ -6578,7 +6582,7 @@ function Ya(t, e, i) {
   let o;
   if (Le(e))
     o = gr(new Co(), i, n), o.syncPropertiesFromLexical(t, e, null), o.syncChildrenFromLexical(t, e, null, null, null);
-  else if (Be(e))
+  else if (xe(e))
     o = Fl(new Qt(), e.__text, i, n), o.syncPropertiesAndTextFromLexical(t, e, null);
   else if (ho(e)) {
     const s = new Qt();
@@ -6701,7 +6705,7 @@ function Ga(t) {
   let n = !1;
   try {
     const o = e.getNode(), s = i.getNode();
-    (!o.isAttached() || !s.isAttached() || Be(o) && e.offset > o.getTextContentSize() || Be(s) && i.offset > s.getTextContentSize()) && (n = !0);
+    (!o.isAttached() || !s.isAttached() || xe(o) && e.offset > o.getTextContentSize() || xe(s) && i.offset > s.getTextContentSize()) && (n = !0);
   } catch {
     n = !0;
   }
@@ -6844,7 +6848,7 @@ class St {
     for (let g = 0; g < A; g++) {
       const m = o[I], E = r[g], C = E.getNode(), R = E._key;
       if (C !== null && m === R) {
-        const p = Be(C);
+        const p = xe(C);
         if (c.add(m), p) if (E._key = m, E instanceof St) {
           const k = E._xmlText;
           E.syncPropertiesFromYjs(e, null), E.applyChildrenYjsDelta(e, k.toDelta()), E.syncChildrenFromYjs(e);
@@ -6894,7 +6898,7 @@ class St {
   }
   _syncChildFromLexical(e, i, n, o, s, r) {
     const A = this._children[i], l = Oi(n);
-    A instanceof St && Le(l) ? (A.syncPropertiesFromLexical(e, l, o), A.syncChildrenFromLexical(e, l, o, s, r)) : A instanceof dt && Be(l) ? A.syncPropertiesAndTextFromLexical(e, l, o) : A instanceof vt && ji(l) && A.syncPropertiesFromLexical(e, l, o);
+    A instanceof St && Le(l) ? (A.syncPropertiesFromLexical(e, l, o), A.syncChildrenFromLexical(e, l, o, s, r)) : A instanceof dt && xe(l) ? A.syncPropertiesAndTextFromLexical(e, l, o) : A instanceof vt && ji(l) && A.syncPropertiesFromLexical(e, l, o);
   }
   syncChildrenFromLexical(e, i, n, o, s) {
     const r = this.getPrevNode(n), A = r === null ? [] : ns(r, n), l = ns(i, null), c = A.length - 1, u = l.length - 1, d = e.collabNodeMap;
@@ -6982,7 +6986,7 @@ function Za(t, e) {
     const s = t.getNode();
     Le(s) || st(184);
     let r = 0, A = 0, l = s.getFirstChild();
-    for (; l !== null && A++ < n; ) Be(l) ? r += l.getTextContentSize() + 1 : r++, l = l.getNextSibling();
+    for (; l !== null && A++ < n; ) xe(l) ? r += l.getTextContentSize() + 1 : r++, l = l.getNextSibling();
     n = r;
   }
   return Xu(o, n);
@@ -7073,7 +7077,7 @@ function ba(t, e) {
 function Ua(t, e, i) {
   if (t.key !== e || t.offset !== i) {
     let n = je(e);
-    if (n !== null && !Le(n) && !Be(n)) {
+    if (n !== null && !Le(n) && !xe(n)) {
       const o = n.getParentOrThrow();
       e = o.getKey(), i = n.getIndexWithinParent(), n = o;
     }
@@ -7168,7 +7172,7 @@ function pR(t, e, i, n, o = Bg) {
     n || xA(ps);
   }, { onUpdate: () => {
     o(t, e), s.update(() => {
-      ct().getChildrenSize() === 0 && ct().append(_e());
+      ct().getChildrenSize() === 0 && ct().append(Pe());
     });
   }, skipTransforms: !0, tag: n ? Yi : KA });
 }
@@ -7181,7 +7185,7 @@ function VR(t, e, i, n, o, s, r, A) {
         const I = Array.from(d), h = u.collabNodeMap, g = [], m = [];
         for (let E = 0; E < I.length; E++) {
           const C = I[E], R = je(C), p = h.get(C);
-          if (p instanceof dt) if (Be(R)) g.push([p, R.__text]);
+          if (p instanceof dt) if (xe(R)) g.push([p, R.__text]);
           else {
             const k = p.getOffset();
             if (k === -1) continue;
@@ -7991,7 +7995,7 @@ function Tg(t, e, i) {
       const N = Ji(Q);
       l(Q.hasFormat("bold")), u(Q.hasFormat("italic")), I(Q.hasFormat("underline")), g(Q.hasFormat("uppercase")), E(Q.hasFormat("lowercase")), R(Q.hasFormat("capitalize")), k(Q.hasFormat("strikethrough")), x(Q.hasFormat("subscript")), S(Q.hasFormat("superscript")), Z(Q.hasFormat("code"));
       const D = N.getParent();
-      Xe(D) || Xe(N) ? r(!0) : r(!1), !Ju(Q.anchor.getNode()) && Q.getTextContent() !== "" ? o(Be(N) || Xs(N)) : o(!1);
+      Xe(D) || Xe(N) ? r(!0) : r(!1), !Ju(Q.anchor.getNode()) && Q.getTextContent() !== "" ? o(xe(N) || Xs(N)) : o(!1);
       const F = Q.getTextContent().replace(/\n/g, "");
       if (!Q.isCollapsed() && F === "") {
         o(!1);
@@ -8104,7 +8108,7 @@ class hn extends zt {
 function vg(t = "") {
   return ni(new hn(t));
 }
-const Xg = Y.lazy(() => import("./ImageComponent-DgjJkYm3.js"));
+const Xg = Y.lazy(() => import("./ImageComponent-qDP1woJe.js"));
 function Pg(t) {
   return t.parentElement != null && t.parentElement.tagName === "LI" && t.previousSibling === null && t.getAttribute("aria-roledescription") === "checkbox";
 }
@@ -8453,7 +8457,7 @@ function om({
         Yo,
         (i) => {
           const n = Er(i);
-          return vc([n]), jA(n.getParentOrThrow()) && cu(n, _e).selectEnd(), !0;
+          return vc([n]), jA(n.getParentOrThrow()) && cu(n, Pe).selectEnd(), !0;
         },
         Dt
       ),
@@ -8684,12 +8688,12 @@ function mm() {
         );
         if (Fn(l)) {
           const c = l.getParent(), u = c && (o ? c.getFirstChild() : c == null ? void 0 : c.getLastChild()), d = o ? (r = l.getFirstDescendant()) == null ? void 0 : r.getKey() : (A = l.getLastDescendant()) == null ? void 0 : A.getKey();
-          c !== null && u === l && s.anchor.key === d && (o ? l.insertBefore(_e()) : l.insertAfter(_e()));
+          c !== null && u === l && s.anchor.key === d && (o ? l.insertBefore(Pe()) : l.insertAfter(Pe()));
         }
       }
       return !1;
     }, i = (o) => {
-      o.isEmpty() && o.append(_e());
+      o.isEmpty() && o.append(Pe());
     }, n = (o) => {
       const s = o.getParent();
       if (!Fn(s)) {
@@ -8735,7 +8739,7 @@ function mm() {
           const s = Rr(o), r = os(o);
           for (let A = 0; A < r; A++)
             s.append(
-              uo().append(_e())
+              uo().append(Pe())
             );
           bA(s), s.selectStart();
         }), !0),
@@ -8753,7 +8757,7 @@ function mm() {
           if (A > l)
             for (let c = l; c < A; c++)
               r.append(
-                uo().append(_e())
+                uo().append(Pe())
               );
           else if (A < l)
             for (let c = l - 1; c >= A; c--) {
@@ -9145,7 +9149,7 @@ function Vm() {
 }
 function km(t) {
   const e = t.getLastDescendant();
-  Be(e) ? e.select() : Le(e) ? e.selectEnd() : e !== null && e.selectNext();
+  xe(e) ? e.select() : Le(e) ? e.selectEnd() : e !== null && e.selectNext();
 }
 function eA(t) {
   return t.getEditorState().read(() => {
@@ -11062,7 +11066,7 @@ function vm({
     }
   );
 }
-const Xm = Y.lazy(() => import("./StickyComponent-DwmztrsN.js"));
+const Xm = Y.lazy(() => import("./StickyComponent-B-kk43Bw.js"));
 class bi extends It {
   static getType() {
     return "sticky";
@@ -11766,11 +11770,11 @@ class Ac extends Gi {
       if (Le(s))
         return s;
       {
-        const r = _e();
+        const r = Pe();
         return o.append(r), r;
       }
     } else {
-      const o = _e();
+      const o = Pe();
       return n.insertAfter(o, i), o;
     }
   }
@@ -11780,7 +11784,7 @@ function hE() {
 }
 const RE = tt(
   "INSERT_COLLAPSIBLE_COMMAND"
-), CE = Y.lazy(() => import("./DateTimeComponent-CaI23xHN.js")), aA = (t) => {
+), CE = Y.lazy(() => import("./DateTimeComponent-rHGo4mTV.js")), aA = (t) => {
   if (t === void 0)
     return "";
   const e = t == null ? void 0 : t.getHours(), i = t == null ? void 0 : t.getMinutes();
@@ -11857,7 +11861,7 @@ function AA(t) {
 function KR(t) {
   return t instanceof qr;
 }
-const VE = tt("INSERT_DATETIME_COMMAND"), kE = Y.lazy(() => import("./EquationComponent-CVV020ku.js"));
+const VE = tt("INSERT_DATETIME_COMMAND"), kE = Y.lazy(() => import("./EquationComponent-CR5BmIs9.js"));
 function lA(t) {
   let e = t.getAttribute("data-lexical-equation");
   const i = t.getAttribute("data-lexical-inline") === "true";
@@ -12054,7 +12058,7 @@ function SE({
   );
   return /* @__PURE__ */ a.jsx(qE, { onConfirm: i });
 }
-const xE = Y.lazy(() => import("./ExcalidrawComponent-B09TavLZ.js"));
+const xE = Y.lazy(() => import("./ExcalidrawComponent-BM4RCDOa.js"));
 function QE(t) {
   const e = t.getAttribute("data-lexical-excalidraw-json"), i = window.getComputedStyle(t), n = i.getPropertyValue("height"), o = i.getPropertyValue("width"), s = !n || n === "inherit" ? "inherit" : parseInt(n, 10), r = !o || o === "inherit" ? "inherit" : parseInt(o, 10);
   return e ? {
@@ -12155,7 +12159,7 @@ function jR(t) {
 }
 const KE = tt(
   "INSERT_EXCALIDRAW_COMMAND"
-), YE = Y.lazy(() => import("./InlineImageComponent-NrF3sWiO.js"));
+), YE = Y.lazy(() => import("./InlineImageComponent-BAhlXfkH.js"));
 function jE(t) {
   if (hi(t) && t.nodeName === "IMG") {
     const { alt: e, src: i, width: n, height: o } = t;
@@ -12502,7 +12506,7 @@ function wE() {
 function uc() {
   return new bo();
 }
-const WE = tt(), OE = Y.lazy(() => import("./PollComponent-CuPGuqSr.js"));
+const WE = tt(), OE = Y.lazy(() => import("./PollComponent-JZIueOpS.js"));
 function DE() {
   return Math.random().toString(36).replace(/[^a-z]+/g, "").substring(0, 5);
 }
@@ -12819,7 +12823,7 @@ const dc = (t, e) => {
 }, Uo = (t) => {
   t.update(() => {
     const e = re();
-    Ro(e, () => _e());
+    Ro(e, () => Pe());
   });
 }, Es = (t, e, i) => {
   e !== i && t.update(() => {
@@ -12856,14 +12860,14 @@ const dc = (t, e) => {
       if (i.key === n.key && i.offset === n.offset)
         return;
       o.forEach((r, A) => {
-        if (Be(r)) {
+        if (xe(r)) {
           let l = r;
           A === 0 && i.offset !== 0 && (l = l.splitText(i.offset)[1] || l), A === o.length - 1 && (l = l.splitText(n.offset)[0] || l);
           const c = s[0];
-          o.length === 1 && Be(c) && (l = c), l.__style !== "" && l.setStyle(""), l.__format !== 0 && l.setFormat(0);
+          o.length === 1 && xe(c) && (l = c), l.__style !== "" && l.setStyle(""), l.__format !== 0 && l.setFormat(0);
           const u = fn(l);
           u.__format !== 0 && u.setFormat(""), u.__indent !== 0 && u.setIndent(0), r = l;
-        } else Qi(r) || su(r) ? r.replace(_e(), !0) : Ls(r) && r.setFormat("");
+        } else Qi(r) || su(r) ? r.replace(Pe(), !0) : Ls(r) && r.setFormat("");
       });
     }
   });
@@ -14826,7 +14830,7 @@ ${e.map(qh).join(`
         const q = ct();
         q.clear();
         const x = Ye();
-        q.append(_e().append(x)), x.select();
+        q.append(Pe().append(x)), x.select();
       }), i([])), o((q) => !q);
     },
     [n]
@@ -14966,7 +14970,7 @@ function Yh() {
     };
   }, [t]), null;
 }
-function Pe({
+function _e({
   checked: t,
   onClick: e,
   text: i,
@@ -15032,7 +15036,7 @@ function jh() {
     ),
     p ? /* @__PURE__ */ a.jsxs("div", { className: "switches", children: [
       o && ui && /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => {
             e("isCollab", !n), window.location.reload();
@@ -15042,7 +15046,7 @@ function jh() {
         }
       ),
       ui && /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => {
             q ? window.parent.location.href = `/${x}` : window.location.href = `/split/${x}`;
@@ -15052,7 +15056,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => e("measureTypingPerf", !i),
           checked: i,
@@ -15060,7 +15064,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => e("showTreeView", !u),
           checked: u,
@@ -15068,7 +15072,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => e("showNestedEditorTreeView", !d),
           checked: d,
@@ -15076,7 +15080,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => {
             e("isRichText", !o), e("isCollab", !1);
@@ -15086,7 +15090,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => e("isCharLimit", !A),
           checked: A,
@@ -15094,7 +15098,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => e("isCharLimitUtf8", !l),
           checked: l,
@@ -15102,7 +15106,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => e("hasLinkAttributes", !r),
           checked: r,
@@ -15110,7 +15114,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => e("isMaxLength", !s),
           checked: s,
@@ -15118,7 +15122,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => e("isAutocomplete", !c),
           checked: c,
@@ -15126,7 +15130,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => {
             e("showTableOfContents", !I);
@@ -15136,7 +15140,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => {
             e(
@@ -15149,7 +15153,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => {
             e(
@@ -15162,7 +15166,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => {
             e(
@@ -15175,7 +15179,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => {
             e("selectionAlwaysOnDisplay", !E);
@@ -15185,7 +15189,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => {
             e("isCodeHighlighted", !C);
@@ -15195,7 +15199,7 @@ function jh() {
         }
       ),
       /* @__PURE__ */ a.jsx(
-        Pe,
+        _e,
         {
           onClick: () => {
             e("isCodeShiki", !R);
@@ -15221,7 +15225,7 @@ function Gh() {
         "In case you were wondering what the black box at the bottom is – it's the debug view, showing the current state of the editor. You can disable it by pressing on the settings control in the bottom-left of your screen and toggling the debug view setting."
       )
     ), t.append(i);
-    const n = _e();
+    const n = Pe();
     n.append(
       Ye("The playground is a demo environment built with "),
       Ye("@lexical/react").toggleFormat("code"),
@@ -15232,13 +15236,13 @@ function Gh() {
       Ye("different").toggleFormat("italic"),
       Ye(" formats.")
     ), t.append(n);
-    const o = _e();
+    const o = Pe();
     o.append(
       Ye(
         "Make sure to check out the various plugins in the toolbar. You can also use #hashtags or @-mentions too!"
       )
     ), t.append(o);
-    const s = _e();
+    const s = Pe();
     s.append(
       Ye("If you'd like to find out more about Lexical, you can:")
     ), t.append(s);
@@ -15273,7 +15277,7 @@ function Gh() {
         Ye(" and chat with the team.")
       )
     ), t.append(r);
-    const A = _e();
+    const A = Pe();
     A.append(
       Ye(
         "Lastly, we're constantly adding cool new features to this playground. So make sure you check back here when you next get a chance :)."
@@ -15304,7 +15308,7 @@ function Nh() {
               ...r,
               forChild: (c, u) => {
                 const d = l(c, u);
-                return Be(d) && d.setStyle(d.getStyle() + A), d;
+                return xe(d) && d.setStyle(d.getStyle() + A), d;
               }
             };
           }
