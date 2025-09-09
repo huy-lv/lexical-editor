@@ -26,6 +26,7 @@ export default defineConfig(({ mode }) => {
               "react",
               "react-dom",
               "lexical",
+              "@lexical/headless",
               "@lexical/react",
               "@lexical/clipboard",
               "@lexical/code",

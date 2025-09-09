@@ -45,8 +45,7 @@ export * from "./collaboration";
 // Export commenting
 export * from "./commenting";
 
-// Export server validation
-export * from "./server/validation";
+// Do not export server-only code in library bundle
 
 // Export setup environment
 export { default as setupEnv } from "./setupEnv";
