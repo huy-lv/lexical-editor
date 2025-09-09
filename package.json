@@ -26,8 +26,7 @@
     "build-prod": "vite build --mode production",
     "build-vercel": "(cd ../../ && node ./scripts/build.js) && npm run build-dev",
     "preview": "vite preview",
-    "prepublishOnly": "npm run build",
-    "prepare": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@excalidraw/excalidraw": "^0.18.0",
