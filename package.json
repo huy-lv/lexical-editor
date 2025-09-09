@@ -1,14 +1,31 @@
 {
   "name": "lexical-playground",
   "version": "0.35.0",
-  "private": true,
+  "private": false,
   "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": "./dist/styles.css"
+  },
   "scripts": {
     "dev": "vite --host --port 3000",
+    "build": "vite build --mode library",
     "build-dev": "vite build",
     "build-prod": "vite build --mode production",
     "build-vercel": "(cd ../../ && node ./scripts/build.js) && npm run build-dev",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@excalidraw/excalidraw": "^0.18.0",
