@@ -1,1 +1,0 @@
-"use strict";const o=require("./index-j4rxvZK9.cjs"),l=require("react");function u({defaultSelection:n}){const[e]=o.o();return l.useEffect(()=>{e.focus(()=>{const c=document.activeElement,t=e.getRootElement();t===null||c!==null&&t.contains(c)||t.focus({preventScroll:!0})},{defaultSelection:n})},[n,e]),null}exports.o=u;

@@ -48,6 +48,10 @@ export * from "./commenting";
 // Export nodes collection
 export { default as PlaygroundNodes } from "./nodes/PlaygroundNodes";
 
+// Export contexts/providers and composer
+export { LexicalComposer } from "@lexical/react/LexicalComposer";
+export { TableContext } from "./plugins/TablePlugin";
+
 // Export setup environment
 export { default as setupEnv } from "./setupEnv";
 
